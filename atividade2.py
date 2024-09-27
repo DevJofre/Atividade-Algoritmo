@@ -11,7 +11,7 @@ def get_theme_words(theme_choice):
         4: ["brasil", "alemanha", "franca", "argentina", "mexico"],
         5: ["cadeira", "mesa", "laptop", "telefone", "caneca"]
     }
-    return themes.get(theme_choice, themes[5])  # Tema padrão: Objetos
+    return themes.get(theme_choice, themes[5])
 
 def choose_difficulty():
     difficulties = {1: 10, 2: 7, 3: 5}
@@ -58,13 +58,13 @@ def game_loop(secret_word, shuffled_word, attempts):
 def main():
     print("Bem-vindo ao jogo de adivinhar palavras!")
     
-    theme_choice = get_theme_choice()  # Escolher tema
-    words = get_theme_words(theme_choice)  # Obter palavras com base no tema escolhido
-    secret_word = random.choice(words)  # Palavra secreta
-    shuffled_word = shuffle_word(secret_word)  # Embaralhar palavra secreta
+    theme_choice = get_theme_choice()  
+    words = get_theme_words(theme_choice)  
+    secret_word = random.choice(words)  
+    shuffled_word = shuffle_word(secret_word)  
 
-    attempts = choose_difficulty()  # Definir nível de dificuldade
-    game_loop(secret_word, shuffled_word, attempts)  # Rodar o jogo
+    attempts = choose_difficulty()  
+    game_loop(secret_word, shuffled_word, attempts)  
 
     print("\nFim de jogo. Obrigado por jogar!")
 
